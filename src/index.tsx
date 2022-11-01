@@ -1,20 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
+import './index.css'; // global
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Simple from './Simple';
-import Expressions from './Expressions';
-import Conditionals from './Conditionals';
-import UseEffectExamples from './UseEffectExamples';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <UseEffectExamples />
-  </React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
