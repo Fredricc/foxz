@@ -29,7 +29,7 @@ class ErrorBoundary extends React.Component<errorBoundaryProps, errorBoundarySta
 }
 
 interface errorBoundaryProps{
-    errorUI?: React.ReactNode
+    errorUI?: React.ReactNode;
     children?: React.ReactNode;
 }
 
