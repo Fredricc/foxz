@@ -91,6 +91,7 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
     )
 }
 
+
 interface typeAheadActorsProps {
     displayName: string;
     actors: actorMovieDTO[];
