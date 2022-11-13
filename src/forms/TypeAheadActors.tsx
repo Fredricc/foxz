@@ -48,7 +48,6 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
                     if (props.actors.findIndex(x => x.id === actors[0].id) === -1){
                         props.onAdd([...props.actors, actors[0]]);
                     }
-
                     console.log(actors);
                 }}
                 options={actors}
