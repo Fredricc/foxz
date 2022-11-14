@@ -41,6 +41,7 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
     return (
         <div className="mb-3">
             <label>{props.displayName}</label>
+            
             <Typeahead
                 id="typeahead"
                 onChange={actors => {
