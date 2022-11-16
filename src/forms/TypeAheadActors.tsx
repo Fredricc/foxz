@@ -30,6 +30,7 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
         if (actor.id !== draggedElement.id){
             const draggedElementIndex = props.actors.findIndex(x => x.id === draggedElement.id);
             const actorIndex = props.actors.findIndex(x => x.id === actor.id);
+            
 
             const actors = [...props.actors];
             actors[actorIndex] = draggedElement;
