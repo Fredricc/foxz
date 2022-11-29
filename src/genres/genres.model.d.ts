@@ -1,5 +1,5 @@
 export interface genreCreationDTO {
-    name: string;
+    name: any;
 }
 
 export interface genreDTO {
