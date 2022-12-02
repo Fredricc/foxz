@@ -11,5 +11,4 @@ export interface actorMovieDTO {
     name: any;
     character: string;
     picture: string;
-    children?: React.ReactNode;
 }

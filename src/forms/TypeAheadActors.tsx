@@ -99,5 +99,4 @@ interface typeAheadActorsProps {
     onAdd(actors: actorMovieDTO[]): void;
     onRemove(actor: actorMovieDTO): void;
     listUI(actor: actorMovieDTO): ReactElement;
-    children?: React.ReactNode;
 }
