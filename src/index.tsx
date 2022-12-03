@@ -1,17 +1,15 @@
-import React, { StrictMode } from 'react';
-import ReactDOM, { createRoot } from 'react-dom/client';
-import './index.css'; // global
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
-const container = document.getElementById('app');
-const root = createRoot(container!); // createRoot(container!) if you use TypeScript
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <StrictMode>
+  <React.StrictMode>
     <App />
-  </StrictMode>
+  </React.StrictMode>
 );
 
 reportWebVitals();
-
