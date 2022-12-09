@@ -1,6 +1,7 @@
 import { ReactElement, useState } from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead'
 import { actorMovieDTO } from '../actors/actors.model'
+import { Id, name, character, picture } from '../actors/actors.model.js
 
 export default function TypeAheadActors(props: typeAheadActorsProps) {
 
