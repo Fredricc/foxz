@@ -6,7 +6,7 @@ import { Id, name, character, picture } from '../actors/actors.model.js
 export default function TypeAheadActors(props: typeAheadActorsProps) {
 
     const actors: actorMovieDTO[] = [{
-        id: 1, name: 'Fredr', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/220px-Tom_Holland_by_Gage_Skidmore.jpg'
+        id: 1, name: 'Fredrick', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/220px-Tom_Holland_by_Gage_Skidmore.jpg'
     },
     {
         id: 2, name: 'Duncan', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Dwayne_Johnson_2%2C_2013.jpg/220px-Dwayne_Johnson_2%2C_2013.jpg'
