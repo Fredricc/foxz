@@ -44,6 +44,7 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
             <label>{props.displayName}</label>
             <Typeahead
                 id="typeahead"
+                options={actors}
                 onChange={actors => {
                     
                     if (props.actors.findIndex(x => x.id === actors[0].id) === -1){
@@ -52,7 +53,7 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
 
                     console.log(actors);
                 }}
-                options={actors}
+                
                 labelKey={actor => actor.name}
                 filterBy={['name']}
                 placeholder="Write the name of the actor..."
