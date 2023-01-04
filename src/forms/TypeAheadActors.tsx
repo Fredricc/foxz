@@ -8,7 +8,7 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
         id: 1, name: 'Fredrick', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/220px-Tom_Holland_by_Gage_Skidmore.jpg'
     },
     {
-        id: 2, name: 'Kevin', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Dwayne_Johnson_2%2C_2013.jpg/220px-Dwayne_Johnson_2%2C_2013.jpg'
+        id: 2, name: 'Dwayne', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Dwayne_Johnson_2%2C_2013.jpg/220px-Dwayne_Johnson_2%2C_2013.jpg'
     },
     {
         id: 3, name: 'Luke', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Meryl_Streep_December_2018.jpg/220px-Meryl_Streep_December_2018.jpg'
@@ -44,16 +44,16 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
             <label>{props.displayName}</label>
             <Typeahead
                 id="typeahead"
-                options={actors}
                 onChange={actors => {
                     
                     if (props.actors.findIndex(x => x.id === actors[0].id) === -1){
                         props.onAdd([...props.actors, actors[0]]);
                     }
-
+                    
                     console.log(actors);
                 }}
                 
+                options={actors}
                 labelKey={actor => actor.name}
                 filterBy={['name']}
                 placeholder="Write the name of the actor..."
