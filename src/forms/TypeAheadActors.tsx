@@ -5,13 +5,13 @@ import { actorMovieDTO } from '../actors/actors.model'
 export default function TypeAheadActors(props: typeAheadActorsProps) {
 
     const actors: actorMovieDTO[] = [{
-        id: 1, name: 'Fredrick', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/220px-Tom_Holland_by_Gage_Skidmore.jpg'
+        id: 1, name: 'Felipe', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Tom_Holland_by_Gage_Skidmore.jpg/220px-Tom_Holland_by_Gage_Skidmore.jpg'
     },
     {
-        id: 2, name: 'Dwayne', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Dwayne_Johnson_2%2C_2013.jpg/220px-Dwayne_Johnson_2%2C_2013.jpg'
+        id: 2, name: 'Fernando', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Dwayne_Johnson_2%2C_2013.jpg/220px-Dwayne_Johnson_2%2C_2013.jpg'
     },
     {
-        id: 3, name: 'Luke', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Meryl_Streep_December_2018.jpg/220px-Meryl_Streep_December_2018.jpg'
+        id: 3, name: 'Jessica', character: '', picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Meryl_Streep_December_2018.jpg/220px-Meryl_Streep_December_2018.jpg'
     }]
 
     const selected: actorMovieDTO[] = [];
@@ -30,7 +30,6 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
         if (actor.id !== draggedElement.id){
             const draggedElementIndex = props.actors.findIndex(x => x.id === draggedElement.id);
             const actorIndex = props.actors.findIndex(x => x.id === actor.id);
-            
 
             const actors = [...props.actors];
             actors[actorIndex] = draggedElement;
@@ -49,10 +48,9 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
                     if (props.actors.findIndex(x => x.id === actors[0].id) === -1){
                         props.onAdd([...props.actors, actors[0]]);
                     }
-                    
+
                     console.log(actors);
                 }}
-                
                 options={actors}
                 labelKey={actor => actor.name}
                 filterBy={['name']}
@@ -92,7 +90,6 @@ export default function TypeAheadActors(props: typeAheadActorsProps) {
         </div>
     )
 }
-
 
 interface typeAheadActorsProps {
     displayName: string;
